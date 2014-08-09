@@ -4,8 +4,7 @@ backbone.js-example
 I just name it as backbone.js as my motive at the beginnning was to develop 
 simple sample app using backbone.js. I will rename it soon.
 
-Now, I am thinking it to use all the cutting edge technology using to build php and 
-javascrpt app. 
+Now, I am thinking it to use all the cutting edge technology using to build full web stack app using PHP and Javscript. 
 
 It will be just simple app having few features using following tools and APIs. 
 
