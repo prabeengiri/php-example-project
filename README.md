@@ -14,7 +14,7 @@ It will be just simple app having few features using following tools and APIs.
 4. PHP Unit - Unit Test for PHP
 5. Composer - PHP Package Manager
 6. PHP SPL Classes 
-7. Object Relation Mapper - TBD
+7. Object Relation Mapper - Doctrine
 8. MySql - Data storage
 9. Bootstrap - For UI
 10. Backbone and Jquery - Javascript Framework and Library respec.
