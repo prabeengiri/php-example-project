@@ -13,8 +13,12 @@ class Adapter {
     $this->tree = $tree_array;
   }
 
+  public function fetchChildren($parentId) {
+    return $this->_traverse();
+  }
 
-  public function _traverse() {
+  private function _traverse() {
+    var_dump($this->tree);
   }
 
 }

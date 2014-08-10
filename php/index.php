@@ -22,7 +22,8 @@ try {
 }
 
 // Get the Node Object.
-$tree = new \SampleApp\FolderTree\Adapter($tree_array);
+$nodeTree = new \SampleApp\FolderTree\Adapter($tree_array);
+$node = $nodeTree->fetchChildren(1);
 
 // output as the JSON String.
-print $tree->accept(new \SampleApp\FolderTree\Visitor\JsonVisitor());
+print $node->accept(new \SampleApp\FolderTree\Visitor\JsonVisitor());
