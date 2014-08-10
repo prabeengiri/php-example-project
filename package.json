@@ -14,7 +14,8 @@
         "grunt-htmlhint":               "*",
         "matchdep":                     "*",
         "grunt-contrib-concat" :        "*",
-        "grunt-contrib-qunit" :         "*"
+        "grunt-contrib-qunit" :         "*",
+        "grunt-contrib-watch" :         "*"
     },
     "dependencies": {
         "requirejs": "latest"

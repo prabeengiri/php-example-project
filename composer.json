@@ -1,5 +1,15 @@
 {
     "require": {
-        "js/jquery": "1.9.*"
+        "doctrine/orm": "*",
+        "behat/behat": "2.4.*@stable",
+        "twig/twig": "1.*"
+    },
+    "minimum-stability": "dev",
+    "config": {
+        "bin-dir": "bin/"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.1.*"
+        
     }
 }

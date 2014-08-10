@@ -1,0 +1,13 @@
+body {
+	font-family: 'Bitter', serif;
+}
+header {
+	color:white;
+}
+ul li {
+	list-style:none;
+	padding:3px 0;
+}
+span.glyphicon {
+	margin-right:10px;
+}
