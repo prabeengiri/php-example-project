@@ -1,0 +1,16 @@
+{
+    "propel": {
+        "database": {
+            "connections": {
+                "bookstore": {
+                    "adapter": "mysql",
+                    "classname": "Propel\Runtime\Connection\ConnectionWrapper",
+                    "dsn": "mysql:host=localhost;dbname=sample_project",
+                    "user": "root",
+                    "password": "",
+                    "attributes": []
+                }
+            }
+        },
+    }
+}

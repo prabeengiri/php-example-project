@@ -2,7 +2,8 @@
     "require": {
         "doctrine/orm": "*",
         "behat/behat": "2.4.*@stable",
-        "twig/twig": "1.*"
+        "twig/twig": "1.*",
+        "propel/propel": "2.0.0-alpha2"
     },
     "minimum-stability": "dev",
     "config": {
