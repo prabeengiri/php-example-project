@@ -14,5 +14,5 @@ interface VisitableInterface {
    *
    * @param Visitor $node
    */
-  public function apply(Visitor $visitor);
+  public function accept(Visitor $visitor);
 }

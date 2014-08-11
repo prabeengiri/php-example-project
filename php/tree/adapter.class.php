@@ -7,18 +7,56 @@
 namespace SampleApp\FolderTree;
 
 class Adapter {
-  private $tree = array();
 
-  public function __construct(array $tree_array) {
-    $this->tree = $tree_array;
+  private $tree;
+  private $rootNode;
+
+  public function __construct(array $treeArray) {
+    $this->tree = $treeArray;
   }
 
-  public function fetchChildren($parentId) {
-    return $this->_traverse();
+  /**
+   * Returns the children of the provided
+   * tree node.
+   *
+   * @param int $nodeId
+   * @return TreeNode
+   */
+  public function fetchChildren($treeNodeId) {
+    $treeNode = $this->fetchNodeById($treeNodeId);
+    return $this->_attach($treeNode);
   }
 
-  private function _traverse() {
-    var_dump($this->tree);
+  /**
+   * Create node out of individual item array.
+   *
+   * @param array $item
+   * @return \SampleApp\FolderTree\TreeNode
+   */
+  private function createNode($item) {
+    return new TreeNode($item);
   }
 
+  /**
+   * Fetch the TreeNode Object
+   * from the item array by its nodeId
+   *
+   * @param int $id
+   * @return \SampleApp\FolderTree\TreeNode
+   */
+  private function fetchNodeById($id) {
+    foreach($this->tree as $item) {
+      if ($item['nodeId'] == $id) {
+        return $this->createNode($item);
+      }
+    }
+    throw new \SampleApp\FolderTree\Exception\FolderTreeException("Node id '$id' not found in the item array.");
+  }
+
+  /**
+   *
+   */
+  private function _attach(TreeNode $node) {
+
+  }
 }

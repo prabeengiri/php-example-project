@@ -13,5 +13,14 @@ spl_autoload_register(__NAMESPACE__ . '\sampleAppAutoLoader');
  */
 function sampleAppAutoLoader($className) {
   $class = explode("\\", $className);
-  include "tree/" . strtolower(end($class)) . ".class.php";
+  $class = strtolower(end($class));
+  if (preg_match('#interface#i', $class)) {
+    include "tree/" . str_replace('interface', '', $class) . ".interface.php";
+  }
+  else if (preg_match('#abstract#i', $class)) {
+    include "tree/" . str_replace('abstract', '', $class) . ".abstract.php";
+  }
+  else {
+    include "tree/" . $class . ".class.php";
+  }
 }

@@ -16,7 +16,7 @@ interface CompositeInterface {
   /**
    *
    */
-  public function getChidren();
+  public function getChildrens();
 
   /**
    *

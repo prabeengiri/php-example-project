@@ -14,7 +14,7 @@ try {
   $dbh = new PDO('mysql:host=localhost;dbname=sample_project', "root", "");
   $stmt = $dbh->query('SELECT * from FolderTree');
   $stmt->execute();
-  $tree_array = $stmt->fetchAll(PDO::FETCH_OBJ);
+  $tree_array = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 } catch (PDOException $e) {
   print "Error!: " . $e->getMessage() . "<br/>";
@@ -22,8 +22,8 @@ try {
 }
 
 // Get the Node Object.
-$nodeTree = new \SampleApp\FolderTree\Adapter($tree_array);
-$node = $nodeTree->fetchChildren(1);
+$treeAdapter = new \SampleApp\FolderTree\Adapter($tree_array);
+$node = $treeAdapter->fetchChildren(1);
 
 // output as the JSON String.
 print $node->accept(new \SampleApp\FolderTree\Visitor\JsonVisitor());
