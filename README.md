@@ -1,8 +1,8 @@
-backbone.js-example
+PHP-example-project
 ===================
 
-I just name it as backbone.js as my motive at the beginnning was to develop 
-simple sample app using backbone.js. I will rename it soon.
+I named it as backbone.js as my motive at the beginnning was to develop 
+simple sample app using backbone.js. 
 
 It will be just simple app having few features using following tools and APIs. 
 
